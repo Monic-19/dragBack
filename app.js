@@ -14,6 +14,12 @@ app.use('/uploads', express.static('uploads'));
 app.use(userRoutes);
 
 const PORT = process.env.PORT || 5000;
+
+app.get('/', (req, res) => {
+  res.send('WELCOME');
+})
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
